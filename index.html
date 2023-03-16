@@ -62,8 +62,8 @@
   
     <div style="margin:0px auto; width:800px;padding:50px;">
     <a href="https://cgrimesdauto.github.io/robo-emails/"><button style="background:#003c5d;"> Three-News Style</button></a>
-    <a href="https://cgrimesdauto.github.io/robo-emails/simple">
-    <button style="background:#003c5d;">Simple Mail with Signature</button></a>
+    <a href="https://cgrimesdauto.github.io/robo-emails/generic">
+    <button style="background:#003c5d;">Simple with CTA</button></a>
   </div>
 
 
@@ -72,6 +72,9 @@
 
       Welcome to the email generator. On this page you can generate an HTML email from a template template. <br>
       Please input the content:<br><br><Br>
+      
+      
+      Headline: <input id="headline" value="QUARTERLY NEWS"><br><br>
 
       Opening paragraph: <br>
       <textarea id="opening" style="width:100%;">Here is today's news content. Please read.</textarea>
@@ -80,7 +83,7 @@
 
       <div style="display:inline-block;inline-block;margin:10px;">
 
-        <img src="https://via.placeholder.com/150" id="imagePreview1">
+        <img src="https://via.placeholder.com/150" id="imagePreview1" style="width:150px;">
         <Br>
 
         News 1 Image URL:<br>
@@ -105,7 +108,7 @@
 
       <div style="display:inline-block;inline-block;margin:10px;">
 
-        <img src="https://via.placeholder.com/150" id="imagePreview2">
+        <img src="https://via.placeholder.com/150" id="imagePreview2" style="width:150px;">
         <Br>
 
         News 2 Image URL:<br>
@@ -127,7 +130,7 @@
       </div>
 
       <div style="display:inline-block;margin:10px;">
-        <img src="https://via.placeholder.com/150" id="imagePreview3">
+        <img src="https://via.placeholder.com/150" id="imagePreview3" style="width:150px;">
         <Br>
         News 3 Image URL:<br>
         <input id="news3SRC" value="https://via.placeholder.com/150" oninput="imagePreview('imagePreview3','news3SRC')">
@@ -152,7 +155,11 @@
 
       <br><br>
       Closing paragraph: <br>
-      <textarea id="closing" style="width:100%;">Thank you for reading about it.</textarea>
+      <textarea id="closing" style="width:100%;">Thank you for reading about it.</textarea><br><br>
+      
+      Link text: <input id="cta" value="Schedule your presentation">
+      <br>
+      Link address: <input id="ctaLink" value="robolive.info/demo"><br>
       
 
 
