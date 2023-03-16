@@ -1,0 +1,142 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chivo:100,200,300,400">
+
+  <script type="text/javascript" src="index.js"></script>
+
+  <title> Let's Make Emails</title>
+
+  <style>
+    body {
+      padding: 50px;
+      font-family: 'Chivo', serif;
+      font-size: 14px;
+      font-weight: 200;
+      background-size: cover;
+    }
+
+    textarea {
+      font-family: monospace;
+      height: 70px;
+      margin: 20px 0px 2px 0px;
+    }
+
+    input {
+      font-family: monospace;
+    }
+    
+    button {
+         box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    padding: 0 16px;
+    min-width: 64px;
+    height: 36px;
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgb(var(--pure-material-primary-rgb, 101, 164, 213));
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-family: 'Chivo', serif;
+    transition: all .1s ease-in;
+    }
+    
+    button:hover, button:focus {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+      
+   
+}
+    
+    button:active {
+      background-color:#78b5de;
+          box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+
+</head>
+
+<body>
+
+    <div id="" style="width:700px;padding:50px;margin:0px auto;border-radius:3px;  box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.12);background:white;">
+
+      Welcome to the email generator. On this page you can generate an HTML email from a template template. <br>
+      Please input the content:<br><br><Br>
+      
+      Email Title:<Br><input id="title" value="Email title here"><br><br>
+  
+
+      Email Content: 
+      <textarea id="content" style="width:100%;">Type your email content here.</textarea>
+      
+      
+      <div style="display:inline-block;">
+      <br><br>
+      Email Link 1 Text:<Br><input id="cta" value="Get a free ticket"><br><br>
+
+      Email Link 1 Address:<Br><input id="ctaLink" value="https://robolive.info/demo/"><br><br></div>      
+      
+      <div style="display:inline-block; margin:10px;">
+      
+           Email Link 2 Text:<Br><input id="cta2" value="Schedule a meeting"><br><br>
+      
+      Email Link 2 Address:<Br><input id="ctaLink2" value="https://robolive.info/demo/"><br><br></div>
+      
+      <br>
+      
+            <div style="display:inline-block; ">
+      
+           Event Month:<Br><input id="month" value="March"><br><br>
+</div>
+      
+                  <div style="display:inline-block; margin:10px; ">
+      
+           Event Dates:<Br><input id="date" value="25-29"><br><br>
+</div>
+      
+      <br>
+                  <div style="display:inline-block; ">
+      
+           Event Location Line 1:<Br><input id="location1" value="102 Jordan Drive"><br><br>
+</div>
+      
+                        <div style="display:inline-block; margin:10px; ">
+      
+           Event Location Line 2:<Br><input id="location2" value="Chattanooga TN"><br><br>
+</div>
+      
+
+      
+
+      <br><br>
+
+      
+      
+
+
+    <br>
+    <input type="radio" id="langEN" name="lang" value="English" checked><label for="langEN">English</label><br>
+    <input type="radio" id="langDE" name="lang" value="German"><label for="langDE">Deutsch</label><br>
+
+    <br>
+
+    <button onclick="test()">Click to Generate HTML</button>
+      
+
+
+    <br><BR><BR>
+
+    Output:
+
+    <BR>
+    <textarea id="outputHTML" style="width:100%;height:200px;"> </textarea><br>
+    <button onclick="copyOutput()" ">Click to Copy Output</button>
+    <br><br>
+    <span id="copyConfirm"></span>
+
+  </div>
+
+</html>
+</body>
