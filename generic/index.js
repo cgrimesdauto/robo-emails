@@ -121,7 +121,7 @@ function test(){
        <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:100px;">
     </th>
     <th style="text-align:right;font-size:14px;padding:10px;">
-      TRANSPARENCY FOR PRODUCTION ROBOTS
+      TRANSPARENZ BEI FERTIGUNGSROBOTERN
       
     </th>
   </tr>
