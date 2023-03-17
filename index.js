@@ -48,15 +48,23 @@ function test(){
   var cta = document.getElementById("cta").value;
   var ctaLink = document.getElementById("ctaLink").value;
   
+  
+    //creating br tags from newlines in the input
+   var openingFix = opening.replace(/\n/g, "<br>");
+   opening = openingFix;
+  
+  var closingFix = closing.replace(/\n/g, "<br>");
+   closing = closingFix;
+  
+  
   //generate the html
-  var outputHTML = `<body style="font-family:Arial;font-size:16px;">
-
+  var outputHTML = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
   <tr style="background-color:#0a1b2a;color:white;height:50px;">
     <th style="">
-       <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:100px;margin-top:5px;">
+       <a href="https://robolive.info"><img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:100px;margin-top:5px;"></a>
     </th>
     <th style="text-align:right;font-size:14px;padding:10px;">
       TRANSPARENCY FOR PRODUCTION ROBOTS
@@ -85,7 +93,6 @@ function test(){
     </td>
   </tr>
 </table>
-
   <!-- NEWS SEGMENTS --> 
   
   <table style="width:600px;border-collapse: collapse;">
@@ -106,7 +113,6 @@ function test(){
       <td style="width:200px;text-align:center;">
         <a href="${news3Link}"><img src="${news3SRC}" style="width:150px;"></a>
       </td>
-
     </tr>
   
     
@@ -128,7 +134,6 @@ function test(){
       <td style="width:200px;padding:5px 25px 5px 25px;vertical-align: top;">
         <a href="${news3Link}" style="color:#65a4d4; font-weight:bold;text-decoration:none;font-size:18px;">${news3Title}</a>
       </td>
-
     </tr>
     
     <!-- CONTENT ROW--> 
@@ -152,12 +157,9 @@ function test(){
         ${news3Body}
         <br><br><a href="${news3Link}" style="color:#65a4d4; ">Read More</a></span>
       </td>
-
     </tr>
 </table>
-
 <!-- CLOSUNG CONTENT--> 
-
 <table style="width:600px;margin-top:10px;border-collapse: collapse;">
   <tr style="background:white;color:#0a1b2a;">
     <td style="padding:25px;">
@@ -185,7 +187,7 @@ function test(){
   <!-- FOOTER BOTTOM --> 
   <tr style="color:white;background-color:#0a1b2a;">
     <td style="padding:50px;font-size:14px;">
-      <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:200px;padding:10px;"><br>
+      <a href="https://robolive.info"><img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:200px;padding:10px;"></a><br>
       RoboLive<span style="font-size:10px;"><sup>®</sup></span> | Transparency for Production Robots
     </td>
   </tr>
@@ -206,12 +208,9 @@ function test(){
   </tr>
   
 </table>
-
-
 </body>`;
   
-  var outputHTMLDE = `<body style="font-family:Arial;font-size:16px;">
-
+  var outputHTMLDE = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
@@ -246,7 +245,6 @@ function test(){
     </td>
   </tr>
 </table>
-
   <!-- NEWS SEGMENTS --> 
   
   <table style="width:600px;border-collapse: collapse;">
@@ -267,7 +265,6 @@ function test(){
       <td style="width:200px;text-align:center;">
         <a href="${news3Link}"><img src="${news3SRC}" style="width:150px;"></a>
       </td>
-
     </tr>
   
     
@@ -289,7 +286,6 @@ function test(){
       <td style="width:200px;padding:5px 25px 5px 25px;vertical-align: top;">
         <a href="${news3Link}" style="color:#65a4d4; font-weight:bold;text-decoration:none;font-size:18px;">${news3Title}</a>
       </td>
-
     </tr>
     
     <!-- CONTENT ROW--> 
@@ -313,12 +309,9 @@ function test(){
         ${news3Body}
         <br><br><a href="${news3Link}" style="color:#65a4d4; ">Mehr Erfahren</a></span>
       </td>
-
     </tr>
 </table>
-
 <!-- CLOSUNG CONTENT--> 
-
 <table style="width:600px;margin-top:10px;border-collapse: collapse;">
   <tr style="background:white;color:#0a1b2a;">
     <td style="padding:25px;">
@@ -346,7 +339,7 @@ function test(){
   <!-- FOOTER BOTTOM --> 
   <tr style="color:white;background-color:#0a1b2a;">
     <td style="padding:50px;font-size:14px;">
-      <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:200px;padding:10px;"><br>
+      <a href="https://robolive.info/de"><img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:200px;padding:10px;"></a><br>
       RoboLive<span style="font-size:10px;"><sup>®</sup></span> | Transparenz bei Fertigungsrobotern
     </td>
   </tr>
@@ -368,8 +361,6 @@ function test(){
   </tr>
   
 </table>
-
-
 </body>`
   
 
@@ -387,4 +378,3 @@ function test(){
   
   
   }
-
