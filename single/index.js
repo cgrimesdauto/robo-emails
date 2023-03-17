@@ -40,9 +40,17 @@ function test(){
   var cta = document.getElementById("cta").value;
   var ctaLink = document.getElementById("ctaLink").value;
   
+   //creating br tags from newlines in the input
+  var openingFix = opening.replace(/\n/g, "<br>");
+  opening = openingFix;
+  
+  var closingFix = closing.replace(/\n/g, "<br>");
+  closing = closingFix;
+  
+  
+  
   //generate the html
-  var outputHTML = `<body style="font-family:Arial;font-size:16px;">
-
+  var outputHTML = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
@@ -77,7 +85,6 @@ function test(){
     </td>
   </tr>
 </table>
-
   <!-- NEWS SEGMENTS --> 
   
   <table style="width:600px;border-collapse: collapse;">
@@ -88,8 +95,6 @@ function test(){
       <td style="width:600px;text-align:center;">
         <a href="${link}"><img src="${src}" style="width:550px;HEIGHT:250px;"></a>
       </td>
-
-
     </tr>
   
     
@@ -114,12 +119,9 @@ function test(){
         <br><br><a href="${link}" style="color:#65a4d4; ">Read More</a></span>
       </td>
  
-
     </tr>
 </table>
-
 <!-- CLOSUNG CONTENT--> 
-
 <table style="width:600px;margin-top:10px;border-collapse: collapse;">
   <tr style="background:white;color:black;">
     <td style="padding:25px;">
@@ -167,12 +169,9 @@ function test(){
   </tr>
   
 </table>
-
-
 </body>`;
   
-  var outputHTMLDE = `<body style="font-family:Arial;font-size:16px;">
-
+  var outputHTMLDE = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
@@ -207,7 +206,6 @@ function test(){
     </td>
   </tr>
 </table>
-
   <!-- NEWS SEGMENTS --> 
   
   <table style="width:600px;border-collapse: collapse;">
@@ -218,8 +216,6 @@ function test(){
       <td style="width:600px;text-align:center;">
         <a href="${link}"><img src="${src}" style="width:550px;HEIGHT:250px;"></a>
       </td>
-
-
     </tr>
   
     
@@ -244,12 +240,9 @@ function test(){
         <br><br><a href="${link}" style="color:#65a4d4; ">Mehr Erfahren</a></span>
       </td>
  
-
     </tr>
 </table>
-
 <!-- CLOSUNG CONTENT--> 
-
 <table style="width:600px;margin-top:10px;border-collapse: collapse;">
   <tr style="background:white;color:black;">
     <td style="padding:25px;">
@@ -299,8 +292,6 @@ function test(){
   </tr>
   
 </table>
-
-
 </body>`
   
 
