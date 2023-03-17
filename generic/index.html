@@ -14,6 +14,9 @@
       font-size: 14px;
       font-weight: 200;
       background-size: cover;
+      background: #eee;
+
+      background-attachment:fixed;
     }
 
     textarea {
@@ -24,12 +27,13 @@
 
     input {
       font-family: monospace;
+      width:100%;
     }
     
     button {
          box-sizing: border-box;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 0 16px;
     min-width: 64px;
     height: 36px;
@@ -38,10 +42,11 @@
     text-overflow: ellipsis;
     text-transform: uppercase;
     color: #fff;
-    background-color: rgb(var(--pure-material-primary-rgb, 101, 164, 213));
+    background-color: rgb(101, 164, 213);
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     font-family: 'Chivo', serif;
     transition: all .1s ease-in;
+      margin-top:15px;
     }
     
     button:hover, button:focus {
@@ -54,22 +59,105 @@
       background-color:#78b5de;
           box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
     }
+    
+    .card {
+      width:150px;
+      background-color:grey;
+      display:inline-block;
+      border-radius:8px;
+      min-height:200px;
+      padding:25px;
+      margin:10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.12);
+      background:white;
+    }
+    
+        .cardselected {
+      width:150px;
+      background-color:grey;
+      display:inline-block;
+      border-radius:8px;
+      min-height:200px;
+      padding:25px;
+      margin:10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.12);
+      background:white;
+    }
+    
+    h2 {
+      
+    }
+    
   </style>
 
 </head>
 
 <body>
+  
+    
+  <div style="width:900px; margin:0px auto;height:75px;color:dark-grey;">
+  <h1> Select your template:</h1>
+    
+  </div>
 
-    <div id="" style="width:700px;padding:50px;margin:0px auto;border-radius:3px;  box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.12);background:white;">
-
-      Welcome to the email generator. On this page you can generate an HTML email from a template template. <br>
-      Please input the content:<br><br><Br>
+  
+  <!--card container-->
+    <div style="margin:0px auto; width:900px;margin-bottom:100px;">
       
+      
+      <div id="tripleNews" class="card">
+        <img src="https://robolive.info/wp-content/uploads/2023/03/triple-news-1.png" style="width:150px;">
+        <h2>Triple News</h1>
+        For newsletters or displaying multiple articles.
+        <br>
+        <a href="cgrimesdauto.github.io/robo-emails/" style="margin-left:-1px;"><button> create</button></a>
+      </div>
+      
+      <div id="singleNews" class="card">
+        <img src="https://robolive.info/wp-content/uploads/2023/03/single-news.png" style="width:150px;">
+        <h2>Single News</h1>
+        For displaying a single article with a large feature image.<br>
+        <a href="cgrimesdauto.github.io/robo-emails/single" style="margin-left:-1px;"><button> CREATE</button></a>
+      </div>
+      
+            
+      <div id="Simple CTA" class="card">
+        <img src="https://robolive.info/wp-content/uploads/2023/03/simple-cta.png" style="width:150px;">
+        <h2>Simple CTA</h1>
+        For simple text emails with one CTA.<br>
+        <a href="cgrimesdauto.github.io/robo-emails/generic" style="margin-left:-1px; "><button STYLE="background-color:#aaa;"> SELECTED</button></a>
+      </div>
+            
+      <div id="event" class="card">
+        <img src="https://robolive.info/wp-content/uploads/2023/03/event.png" style="width:150px;">
+        <h2>Event</h1>
+        For announcing an upcoming event, with 2 CTAs for invitations.<br>
+        <a href="cgrimesdauto.github.io/robo-emails/event" style="margin-left:-1px;"><button> CREATE</button></a>
+      </div>
+
+      
+
+  </div>
+  
+  
+<div style="width:900px; margin:0px auto;height:75px;color:dark-grey;">
+  <h1> Create your content:</h1>
+    
+  </div>
+  
+  
+  
+  
+  <!-- content card -->
+
+    <div id="" style="width:800px;padding:50px;margin:0px auto;border-radius:3px; background:white;box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.12);">
+
+      <h2>Simple CTA template:</h2><br>
       Email Title:<Br><input id="title" value="Email title here"><br><br>
   
 
       Email Content: 
-      <textarea id="content" style="width:100%;">Type your email content here.</textarea>
+      <textarea id="content" style="width:100%;margin-top:0px;">Type your email content here.</textarea>
       
       <br><br>
       Email Link Button:<Br><input id="cta" value="Schedule a meeting"><br><br>
@@ -81,10 +169,8 @@
       
       
 
-
-    <br>
-    <input type="radio" id="langEN" name="lang" value="English" checked><label for="langEN">English</label><br>
-    <input type="radio" id="langDE" name="lang" value="German"><label for="langDE">Deutsch</label><br>
+    <input type="radio" id="langEN" name="lang" value="English" checked style="width:10px;margin-right:5px;"<label for="langEN">English</label><br>
+    <input type="radio" id="langDE" name="lang" value="German" style="width:10px;margin-right:5px;"><label for="langDE">Deutsch</label><br>
 
     <br>
 
@@ -98,11 +184,17 @@
 
     <BR>
     <textarea id="outputHTML" style="width:100%;height:200px;"> </textarea><br>
-    <button onclick="copyOutput()" ">Click to Copy Output</button>
+    <button onclick="copyOutput()">Click to Copy Output</button>
     <br><br>
     <span id="copyConfirm"></span>
 
   </div>
+  
+      <div style="width:900px; margin:0px auto;height:75px;color:#aaa;text-align:center;margin-top:20px;">
+  made with ROBOL♥VE by cgr
+    
+  </div>
+
 
 </html>
 </body>
