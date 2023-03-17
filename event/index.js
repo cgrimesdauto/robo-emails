@@ -28,8 +28,12 @@ function test(){
   var location1 = document.getElementById("location1").value;
   var location2 = document.getElementById("location2").value;
   
+  //creating br tags from newlines in the input
+   var contentFix = content.replace(/\n/g, "<br>");
+   content = contentFix;
+  
   //generate the html
-  var outputHTML = `<body style="font-family:Arial;font-size:16px;">
+  var outputHTML = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
@@ -113,7 +117,7 @@ function test(){
 </table>
 </body>`;
   
-  var outputHTMLDE = `<body style="font-family:Arial;font-size:16px;">
+  var outputHTMLDE = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
