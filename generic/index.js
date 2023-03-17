@@ -1,4 +1,5 @@
 function copyOutput() {
+  //function to copy the output.
   var copyText = document.getElementById("outputHTML");
 
   copyText.select();
@@ -6,11 +7,12 @@ function copyOutput() {
 
   document.execCommand('copy');
   
+  //display an encouraging message
   document.getElementById("copyConfirm").innerHTML = "Text copied! Good luck on your email!";
   
 }
 
-
+//creates the html
 function test(){
   
   //reset the output box to empty
@@ -22,9 +24,13 @@ function test(){
   var ctaLink = document.getElementById("ctaLink").value;
   var title = document.getElementById("title").value;
   
+  
+  //creating br tags from newlines in the input
+   var contentFix = content.replace(/\n/g, "<br>");
+   content = contentFix;
+  
   //generate the html
-  var outputHTML = `<body style="font-family:Arial;font-size:16px;">
-
+  var outputHTML = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
@@ -44,15 +50,10 @@ function test(){
   <tr style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png')" >
     <td style="padding:25px; height:100px;">
       <h1 style="margin:0px;">${title}</h1>
-
     </td>
   </tr>
 </table>
-
-
-
 <!-- MAIN CONTENT--> 
-
 <table style="width:600px;margin-top:10px;border-collapse: collapse;">
   <tr style="background:white;color:#0a1b2a;">
     <td style="padding:25px;">
@@ -103,16 +104,13 @@ function test(){
   </tr>
   
 </table>
-
-
 </body>
     
     
   
     `;
-  
-  var outputHTMLDE = `<body style="font-family:Arial;font-size:16px;">
-
+  //now in german
+  var outputHTMLDE = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
@@ -132,15 +130,10 @@ function test(){
   <tr style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png')" >
     <td style="padding:25px; height:100px;">
       <h1 style="margin:0px;">${title}</h1>
-
     </td>
   </tr>
 </table>
-
-
-
 <!-- MAIN CONTENT--> 
-
 <table style="width:600px;margin-top:10px;border-collapse: collapse;">
   <tr style="background:white;color:#0a1b2a;">
     <td style="padding:25px;">
@@ -192,17 +185,16 @@ function test(){
   </tr>
   
 </table>
-
-
 </body>
     
     
   
      `
   
+  //TODO have one string instead and append the DE stuff where necessary instead of this travesty
+  
 
   //output the correct template depending on language
- 
   if (document.getElementById("langEN").checked == true) {
     document.getElementById("outputHTML").value = outputHTML;
     
