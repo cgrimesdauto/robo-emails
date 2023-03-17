@@ -30,13 +30,12 @@ function test(){
   
   //generate the html
   var outputHTML = `<body style="font-family:Arial;font-size:16px;">
-
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
   <tr style="background-color:#0a1b2a;color:white;height:50px;">
     <th style="">
-       <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:100px;">
+       <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:100px;margin-top:5px;">
     </th>
     <th style="text-align:right;font-size:14px;padding:10px;">
       TRANSPARENCY FOR PRODUCTION ROBOTS
@@ -50,15 +49,10 @@ function test(){
   <tr style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png')" >
     <td style="padding:25px; height:100px;">
       <h1 style="margin:0px;">${title}</h1>
-
     </td>
   </tr>
 </table>
-
-
-
 <!-- MAIN CONTENT--> 
-
 <table style="width:600px;border-collapse: collapse;">
   <tr style="background:white;color:#0a1b2a;">
     <td style="padding:50px 25px 75px 25px; width:66%;">
@@ -87,7 +81,7 @@ function test(){
   <tr>
     <td style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png');height:50px;font-size:14px;" >
       
-      <a href="Tel: 423-661-2088"><img src="https://robolive.info/wp-content/uploads/2023/03/PHONE-MAIL-ICON.png" style="width:30px;"></a>
+      <a href="Tel: 423-661-2088"><img src="https://robolive.info/wp-content/uploads/2023/03/PHONE-MAIL-ICON.png" style="width:30px;margin-top:5px;"></a>
       <a href="https://www.linkedin.com/showcase/robolivedeu/"><img src="https://robolive.info/wp-content/uploads/2023/03/LINKEDIN-MAIL-ICON.png" style="width:30px;"></a>
       <a href="mailto:usa@dautomation.com"><img src="https://robolive.info/wp-content/uploads/2023/03/MAIL-MAIL-ICON.png" style="width:30px;"></a>
     </td>
@@ -112,23 +106,20 @@ function test(){
   
   <tr style="font-size:12px;color:white;background-color:#0a1b2a;">
     <td style="padding-bottom:50px;">
-        &copy; Robolive 2023 - All rights reserved.<br />Don't want to receive further communication? <a href="#" style="color:#fff;">Click here to unsubscribe</a>.
+        &copy; RoboLive<span style="font-size:8px;"><sup>®</sup></span> 2023 - All rights reserved.<br />Don't want to receive further communication? <a href="#" style="color:#fff;">Click here to unsubscribe</a>.
     </td>
   </tr>
   
 </table>
-
-
 </body>`;
   
   var outputHTMLDE = `<body style="font-family:Arial;font-size:16px;">
-
 <table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
   <!-- TOP HEADER -->  
   <tr style="background-color:#0a1b2a;color:white;height:50px;">
     <th style="">
-       <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:100px;">
+       <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:100px;margin-top:5px;">
     </th>
     <th style="text-align:right;font-size:14px;padding:10px;">
       TRANSPARENZ BEI FERTIGUNGSROBOTERN
@@ -142,15 +133,10 @@ function test(){
   <tr style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png')" >
     <td style="padding:25px; height:100px;">
       <h1 style="margin:0px;">${title}</h1>
-
     </td>
   </tr>
 </table>
-
-
-
 <!-- MAIN CONTENT--> 
-
 <table style="width:600px;border-collapse: collapse;">
   <tr style="background:white;color:#0a1b2a;">
     <td style="padding:50px 25px 75px 25px; width:66%;">
@@ -179,7 +165,7 @@ function test(){
   <tr>
     <td style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png');height:50px;font-size:14px;" >
       
-      <a href="Tel: 423-661-2088"><img src="https://robolive.info/wp-content/uploads/2023/03/PHONE-MAIL-ICON.png" style="width:30px;"></a>
+      <a href="Tel: 423-661-2088"><img src="https://robolive.info/wp-content/uploads/2023/03/PHONE-MAIL-ICON.png" style="width:30px;margin-top:5px;"></a>
       <a href="https://www.linkedin.com/showcase/robolivedeu/"><img src="https://robolive.info/wp-content/uploads/2023/03/LINKEDIN-MAIL-ICON.png" style="width:30px;"></a>
       <a href="mailto:usa@dautomation.com"><img src="https://robolive.info/wp-content/uploads/2023/03/MAIL-MAIL-ICON.png" style="width:30px;"></a>
     </td>
@@ -206,13 +192,11 @@ function test(){
   
   <tr style="font-size:12px;color:white;background-color:#0a1b2a;">
     <td style="padding-bottom:50px;">
-        &copy; Robolive 2023 - Alle Rechte vorbehalten.<br />Sie möchten keine weiteren E-Mails mehr von uns erhalten? Dann klicken Sie <a href="#" style="color:#fff;">hier</a>.
+        &copy; RoboLive<span style="font-size:8px;"><sup>®</sup></span> 2023 - Alle Rechte vorbehalten.<br />Sie möchten keine weiteren E-Mails mehr von uns erhalten? Dann klicken Sie <a href="#" style="color:#fff;">hier</a>.
     </td>
   </tr>
   
 </table>
-
-
 </body> `
     
     
