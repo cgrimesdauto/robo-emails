@@ -363,7 +363,7 @@ function test(){
   
   <tr style="font-size:12px;color:white;background-color:#0a1b2a;">
     <td style="padding-bottom:50px;">
-        &copy; Robolive 2023 - Alle Rechte vorbehalten.<br />Sie möchten keine weiteren E-Mails mehr von uns erhalten? Dann klicken Sie <a href="#" style="color:#fff;">hier</a>.
+        &copy; RoboLive<span style="font-size:8px;"><sup>®</sup></span> 2023 - Alle Rechte vorbehalten.<br />Sie möchten keine weiteren E-Mails mehr von uns erhalten? Dann klicken Sie <a href="#" style="color:#fff;">hier</a>.
     </td>
   </tr>
   
