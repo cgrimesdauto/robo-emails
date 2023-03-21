@@ -25,185 +25,152 @@ function test(){
   var title = document.getElementById("title").value;
   
   
-  //creating br tags from newlines in the input
-   var contentFix = content.replace(/\n/g, "<br>");
+ 
+  //create br tags from newlines in the textarea inputs
+  var contentFix = content.replace(/\n/g, "<br>");
    content = contentFix;
   
-  //generate the html
-  var outputHTML = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
-<table style="width:600px; background:#ababab;border-collapse: collapse;" >
   
-  <!-- TOP HEADER -->  
-  <tr style="background-color:#0a1b2a;color:white;height:50px;">
-    <th style="">
-       <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:100px;margin-top:5px;">
-    </th>
-    <th style="text-align:right;font-size:14px;padding:10px;">
-      TRANSPARENCY FOR PRODUCTION ROBOTS
-      
-    </th>
-  </tr>
-</table>
+  //create the header and footer depending on lang selected
   
-  <!-- HERO --> 
-<table style="width:600px;border-collapse: collapse;">
-  <tr style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png')" >
-    <td style="padding:25px; height:100px;">
-      <h1 style="margin:0px;">${title}</h1>
-    </td>
-  </tr>
-</table>
-<!-- MAIN CONTENT--> 
-<table style="width:600px;margin-top:10px;border-collapse: collapse;">
-  <tr style="background:white;color:#0a1b2a;">
-    <td style="padding:25px;">
-      $name,<br><br>
+    if (document.getElementById("langEN").checked == true) { //if english
       
-      ${content}
-      
-      <br>
-        
-        <a href="${ctaLink}"><button style="margin: 25px 0px 0px 0px;width:100%;padding:10px 0px 10px 0px;background-color:#003c5d;border-radius:30px;border:none;color:white;font-size:16px;font-weight:bold;">${cta}</button></a> 
-    </td>
-  </tr>
-</table>
+      var header = `<table style="width: 600px; min-width: 600px; background: #ababab; border-collapse: collapse; font-family: Tahoma, Arial, sans-serif; font-size: 16px;">
+  <tbody>
+    <tr style="background-color: #0a1b2a; color: #ffffff; height: 50px;">
+      <th style="width: 150px;"><a href="robolive.info/de"><img style="width: 100px;padding-top:5px;" src="https://robolive.info/wp-content/uploads/2023/03/LOGO-SCALE-100.png" alt="RoboLive logo" /></a></th>
+      <th style="text-align: right; font-size: 14px; padding: 10px; width: 450px;">TRANSPARENCY FOR PRODUCTION ROBOTS</th>
+    </tr>
+  </tbody>
+</table>`;
+      var footer = `<!-- FOOTER -->
+<table style="width: 600px; min-width: 600px; border-collapse: collapse; color: #ffffff; font-family: Tahoma, Arial, sans-serif; font-size: 16px; background:#0a1b2a;">
+  <tbody>
     
+        <tr><Td style="padding:0px;">
+      <img src="https://robolive.info/wp-content/uploads/2023/03/email-hero-50.png" alt="email-hero-50.png" width="600" height="50" /></td>
+    </tr>
     
-<!-- FOOTER--> 
-<table style="width:600px;text-align:center;margin-top:50px;border-collapse: collapse;">
-  <tr>
-    <td style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png');height:50px;font-size:14px;" >
-      
-      <a href="Tel: 423-661-2088"><img src="https://robolive.info/wp-content/uploads/2023/03/PHONE-MAIL-ICON.png" style="width:30px;margin-top:5px;"></a>
-      <a href="https://www.linkedin.com/showcase/robolivedeu/"><img src="https://robolive.info/wp-content/uploads/2023/03/LINKEDIN-MAIL-ICON.png" style="width:30px;"></a>
-      <a href="mailto:usa@dautomation.com"><img src="https://robolive.info/wp-content/uploads/2023/03/MAIL-MAIL-ICON.png" style="width:30px;"></a>
-    </td>
-  </tr>
-  
-  <!-- FOOTER BOTTOM --> 
-  <tr style="color:white;background-color:#0a1b2a;">
-    <td style="padding:50px;font-size:14px;">
-      <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:200px;padding:10px;"><br>
-      RoboLive<span style="font-size:10px;"><sup>®</sup></span> | Transparency for Production Robots
-    </td>
-  </tr>
-  <tr style="font-size:12px;color:white;background-color:#0a1b2a;">
-    <td>
-      Dressler Automation Corp.<br>
-      102 Jordan Drive, Chattanooga TN 37421<br>
-      Tel. (423) 661-2088<br>
-      Email: <a href="mailto:usa@dautomation.com" style="color: #65a4d4">usa@dautomation.com</a><br>
-      <a href="robolive.info" style="color: #65a4d4">robolive.info</a>
-    </td>
-  </tr>
-  
-  <tr style="font-size:12px;color:white;background-color:#0a1b2a;">
-    <td style="padding-bottom:50px;">
-        &copy; RoboLive<span style="font-size:8px;"><sup>®</sup></span> 2023 - All rights reserved.<br />Don't want to receive further communication? <a href="#" style="color:#fff;">Click here to unsubscribe</a>.
-    </td>
-  </tr>
-  
-</table>
-</body>
+    <!-- LOGO + TAGLINE -->
+    <tr style="color: #ffffff; background-color: #0a1b2a; text-align:center;">
+      <td style="padding: 50px; font-size: 14px;"><a href="#"><img style="width: 200px; padding: 10px;" src="https://robolive.info/wp-content/uploads/2023/03/LOGO-SCALE-200.png" alt="Robolive Logo" /></a><br /><br />RoboLive<span style="font-size: 10px;"><sup>&reg;</sup></span> | Transparency for Production Robots</td>
+    </tr>
     
+    <TR style="color: #ffffff; background-color: #0a1b2a; text-align:center;">
+      <td>
+        <!-- SOCIAL ICONS -->
+        <a href="tel:423-661-2088"><img style="width: 30px; padding-bottom: 8px;" src="https://robolive.info/wp-content/uploads/2023/03/ICON-PHONE-30.png" alt="PHONE" /></a> <a href="https://www.linkedin.com/showcase/77684161"><img style="width: 30px; padding-bottom: 8px;" src="https://robolive.info/wp-content/uploads/2023/03/ICON-LINKEDIN-30.png" alt="LINKEDIN" /></a> <a href="mailto:usa@dautomation.com"><img style="width: 30px; padding-bottom: 8px;" src="https://robolive.info/wp-content/uploads/2023/03/ICON-MAIL-30.png" alt="MAIL" /></a>
+        </td>
+ 
+        </TR>
     
-  
-    `;
-  //now in german
-  var outputHTMLDE = `<body style="font-family:Tahoma,Arial,sans-serif;font-size:16px;">
-<table style="width:600px; background:#ababab;border-collapse: collapse;" >
-  
-  <!-- TOP HEADER -->  
-  <tr style="background-color:#0a1b2a;color:white;height:50px;">
-    <th style="">
-       <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:100px;margin-top:5px;">
-    </th>
-    <th style="text-align:right;font-size:14px;padding:10px;">
-      TRANSPARENZ BEI FERTIGUNGSROBOTERN
-      
-    </th>
-  </tr>
-</table>
-  
-  <!-- HERO --> 
-<table style="width:600px;border-collapse: collapse;">
-  <tr style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png')" >
-    <td style="padding:25px; height:100px;">
-      <h1 style="margin:0px;">${title}</h1>
-    </td>
-  </tr>
-</table>
-<!-- MAIN CONTENT--> 
-<table style="width:600px;margin-top:10px;border-collapse: collapse;">
-  <tr style="background:white;color:#0a1b2a;">
-    <td style="padding:25px;">
-      $name,<br><br>
-      
-      ${content}
-      
-      <br>
-        
-        <a href="${ctaLink}"><button style="margin: 25px 0px 0px 0px;width:100%;padding:10px 0px 10px 0px;background-color:#003c5d;border-radius:30px;border:none;color:white;font-size:16px;font-weight:bold;">${cta}</button></a> 
-    </td>
-  </tr>
-</table>
+    <!-- CONTACT + OPT-OUT -->
+    <tr style="font-size: 12px; color: #ffffff; background-color: #0a1b2a; text-align:center;">
+      <td>Dressler Automation Corp.<br />102 Jordan Drive, Chattanooga TN 37421<br />Tel. (423) 661-2088<br />Email: <a style="color: #65a4d4;" href="mailto:usa@dautomation.com">usa@dautomation.com</a><br /><a style="color: #65a4d4;" href="robolive.info">robolive.info</a><br><br></td>
+    </tr>
+    <tr style="font-size: 12px; color: #ffffff; background-color: #0a1b2a; text-align:center;">
+      <td style="padding-bottom: 50px;">&copy; RoboLive<span style="font-size: 8px;"><sup>&reg;</sup></span> 2023 - All rights reserved.<br />Don't want to receive further communication? <a style="color: #fff;" href="#">Click here to unsubscribe</a>.</td>
+    </tr>
+  </tbody>
+</table>`;
     
-    
-<!-- FOOTER--> 
-<table style="width:600px;text-align:center;margin-top:50px;border-collapse: collapse;">
-  <tr>
-    <td style="color:white;background:#003c5d;background-image:url('https://robolive.info/wp-content/uploads/2023/03/email-header-bg.png');height:50px;font-size:14px;" >
+    } else{ //if german
       
-      <a href="Tel: 05332-93060"><img src="https://robolive.info/wp-content/uploads/2023/03/PHONE-MAIL-ICON.png" style="width:30px;margin-top:5px;"></a>
-      <a href="https://www.linkedin.com/showcase/robolivedeu/"><img src="https://robolive.info/wp-content/uploads/2023/03/LINKEDIN-MAIL-ICON.png" style="width:30px;"></a>
-      <a href="mailto:usa@dautomation.com"><img src="https://robolive.info/wp-content/uploads/2023/03/MAIL-MAIL-ICON.png" style="width:30px;"></a>
-    </td>
-  </tr>
-  
-  <!-- FOOTER BOTTOM --> 
-  <tr style="color:white;background-color:#0a1b2a;">
-    <td style="padding:50px;font-size:14px;">
-      <img src="https://robolive.info/wp-content/uploads/2023/03/Robolive-Logo_White_WithoutProtectionZone-1.png" style="width:200px;padding:10px;"><br>
-      RoboLive<span style="font-size:10px;"><sup>®</sup></span> | Transparenz bei Fertigungsrobotern
-    </td>
-  </tr>
-  <tr style="font-size:12px;color:white;background-color:#0a1b2a;">
-    <td>
-      Dressler Automation GmbH<br>
-      Braunschweiger Straße 20<br>
+      var header = `<table style="width: 600px; min-width: 600px; background: #ababab; border-collapse: collapse; font-family: Tahoma, Arial, sans-serif; font-size: 16px;">
+  <tbody>
+    <tr style="background-color: #0a1b2a; color: #ffffff; height: 50px;">
+      <th style="width: 150px;"><a href="robolive.info/de"><img style="width: 100px;padding-top:5px;" src="https://robolive.info/wp-content/uploads/2023/03/LOGO-SCALE-100.png" alt="RoboLive logo" /></a></th>
+      <th style="text-align: right; font-size: 14px; padding: 10px; width: 450px;">TRANSPARENZ BEI FERTIGUNGSROBOTERN</th>
+    </tr>
+  </tbody>
+</table>`;
+      var footer = `<!-- FOOTER -->
+<table style="width: 600px; min-width: 600px; border-collapse: collapse; color: #ffffff; font-family: Tahoma, Arial, sans-serif; font-size: 16px; background:#0a1b2a;">
+  <tbody>
+    
+        <tr><Td style="padding:0px;">
+      <img src="https://robolive.info/wp-content/uploads/2023/03/email-hero-50.png" alt="email-hero-50.png" width="600" height="50" /></td>
+    </tr>
+    
+    <!-- LOGO + TAGLINE -->
+    <tr style="color: #ffffff; background-color: #0a1b2a; text-align:center;">
+      <td style="padding: 50px; font-size: 14px;"><a href="robolive.info/de"><img style="width: 200px; padding: 10px;" src="https://robolive.info/wp-content/uploads/2023/03/LOGO-SCALE-200.png" alt="Robolive Logo" /></a><br /><br />RoboLive<span style="font-size: 10px;"><sup>&reg;</sup></span> | Transparenz bei Fertigungsrobotern</td>
+    </tr>
+    
+    <TR style="color: #ffffff; background-color: #0a1b2a; text-align:center;">
+      <td>
+        <!-- SOCIAL ICONS -->
+        <a href="tel:05332-93060"><img style="width: 30px; padding-bottom: 8px;" src="https://robolive.info/wp-content/uploads/2023/03/ICON-PHONE-30.png" alt="PHONE" /></a> <a href="https://www.linkedin.com/showcase/robolivedeu/"><img style="width: 30px; padding-bottom: 8px;" src="https://robolive.info/wp-content/uploads/2023/03/ICON-LINKEDIN-30.png" alt="LINKEDIN" /></a> <a href="mailto:usa@dautomation.com"><img style="width: 30px; padding-bottom: 8px;" src="https://robolive.info/wp-content/uploads/2023/03/ICON-MAIL-30.png" alt="MAIL" /></a>
+        </td>
+ 
+        </TR>
+    
+    <!-- CONTACT + OPT-OUT -->
+    <tr style="font-size: 12px; color: #ffffff; background-color: #0a1b2a; text-align:center;">
+      <td>Dressler Automation GmbH<br />      Braunschweiger Straße 20<br>
       38170 Schöppenstedt<br>
-      Tel.:   05332 93060<br>
-      Email: <a href="mailto:deu@dautomation.com" style="color: #65a4d4">deu@dautomation.com</a><br>
-      <a href="robolive.info/de" style="color: #65a4d4">robolive.info</a>
-    </td>
-  </tr>
+      Tel.:   05332 93060<br>E-Mail: <a style="color: #65a4d4;" href="mailto:office@dautomation.com">office@dautomation.com</a><br /><a style="color: #65a4d4;" href="robolive.info/de">robolive.info</a><br><br></td>
+    </tr>
+    <tr style="font-size: 12px; color: #ffffff; background-color: #0a1b2a; text-align:center;">
+      <td style="padding-bottom: 50px;">&copy; RoboLive<span style="font-size: 8px;"><sup>&reg;</sup></span> 2023 - Alle Rechte vorbehalten.<br />Sie möchten keine weiteren E-Mails mehr von uns erhalten? Dann klicken Sie <a style="color: #fff;" href="#">hier</a>.</td>
+    </tr>
+  </tbody>
+</table>`;
+   
+    }
   
-  <tr style="font-size:12px;color:white;background-color:#0a1b2a;">
-    <td style="padding-bottom:50px;">
-        &copy; RoboLive<span style="font-size:8px;"><sup>®</sup></span> 2023 - Alle Rechte vorbehalten.<br />Sie möchten keine weiteren E-Mails mehr von uns erhalten? Dann klicken Sie <a href="#" style="color:#fff;">hier</a>.
-    </td>
-  </tr>
   
+
+  
+  
+  //generate the html, filling with the variable
+  var outputHTML = `
+  
+  ${header}
+  
+  <!-- HEADER IMAGE-->
+<table style="width: 600px; min-width: 600px; border-collapse: collapse; color: #ffffff; font-family: Tahoma, Arial, sans-serif; font-size: 16px;">
+  <tbody>
+    <tr>
+      <td style="padding:0px;">
+      <img src="https://robolive.info/wp-content/uploads/2023/03/email-hero-50.png" alt="email-hero-50.png" width="600" height="50" />
+      </td>
+    </tr>
+  </tbody>
 </table>
-</body>
-    
-    
-  
-     `
-  
-  //TODO have one string instead and append the DE stuff where necessary instead of this travesty
+
+<!-- MAIN CONTENT--> 
+<table style="width: 600px; min-width: 600px; border-collapse: collapse; color: #ffffff; font-family: Tahoma, Arial, sans-serif; font-size: 16px;">
+  <tr style="background:white;color:#0a1b2a;">
+    <td style="padding:25px;">
+      $contact_first_name,<br><br>
+      
+      ${content}
+      
+      <br><br>
+    </td>
+  </tr>
+</table>
+
+
+<!-- CTA BUTTON -->
+<table style="min-width: 600px; width: 600px; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-align: center;">
+  <tbody>
+    <tr>
+      <td style="padding: 25px;padding-top:35px;"><a style="color: #ffffff; width: 500px; background-color: #0a1b2a; text-decoration: none; border-radius: 30px; text-align: center; border-top: 10px solid #0a1b2a; border-bottom: 10px solid #0a1b2a; border-right: 50px solid #0a1b2a; border-left: 50px solid #0a1b2a;" href="${ctaLink}">${cta}</a> <br /><br /><br /><br /></td>
+    </tr>
+  </tbody>
+</table>
+
+${footer}
+
+`
   
 
   //output the correct template depending on language
-  if (document.getElementById("langEN").checked == true) {
+
     document.getElementById("outputHTML").value = outputHTML;
-    
-  }
-  else{
-    
-    document.getElementById("outputHTML").value = outputHTMLDE;
  
-  }
   
   
   }
