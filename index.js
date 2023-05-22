@@ -213,9 +213,9 @@ function test(){
     </tr>
     <tr>
       <!-- NEWS CAPTIONS + READ MORE -->
-      <td style="width: 200px; padding: 5px 25px 20px 25px; vertical-align: top;">${news1Body} <br /><br /><a style="color: #65a4d4;" href="{news1Link}">${readMore}</a></td>
-      <td style="width: 200px; padding: 5px 25px 5px 25px; vertical-align: top;">${news2Body} <br /><br /><a style="color: #65a4d4;" href="{news2Link}">${readMore}</a></td>
-      <td style="width: 200px; padding: 5px 25px 5px 25px; vertical-align: top;">${news3Body}<br /><br /><a style="color: #65a4d4;" href="{news3Link}">${readMore}</a></td>
+      <td style="width: 200px; padding: 5px 25px 20px 25px; vertical-align: top;">${news1Body} <br /><br /><a style="color: #65a4d4;" href="${news1Link}">${readMore}</a></td>
+      <td style="width: 200px; padding: 5px 25px 5px 25px; vertical-align: top;">${news2Body} <br /><br /><a style="color: #65a4d4;" href="${news2Link}">${readMore}</a></td>
+      <td style="width: 200px; padding: 5px 25px 5px 25px; vertical-align: top;">${news3Body}<br /><br /><a style="color: #65a4d4;" href="${news3Link}">${readMore}</a></td>
     </tr>
   </tbody>
 </table>
