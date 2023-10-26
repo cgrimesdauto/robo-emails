@@ -1,0 +1,15 @@
+First name: <input id="first_name" value="First"><br>
+Last name: <input id="last_name" value="Lastname"><br>
+Company url: <input id="company_url" value="company.com"><br>
+OUTPUT: <input id="output" value="First.Lastname@comapny.com"><br><br>
+
+Choose format: 
+<select id="format">
+  <option value="first_dot_last">First.Lastname@comapny.com</option>
+  <option value="first_last">FirstLastname@company.com</option>
+  <option value="initial_dot_last">F.Lastname@company.com</option>
+  <option value="initial_last">FLastname@comapny.com</option>
+</select>
+<br><br><br>
+
+<button onclick="copy()">copy</button><span id="confirmation"></span>
